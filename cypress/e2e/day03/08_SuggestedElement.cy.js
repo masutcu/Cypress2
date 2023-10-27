@@ -11,17 +11,8 @@ describe('Suggested Element',()=>{
 
 
 
-        cy.wait(3000)
-
-
-
-
    })
 
-   it.skip('Test Case2',()=>{
-    cy.visit('https://automationpractice.com/index.php')
-
-
-   })
+   
 
 })
