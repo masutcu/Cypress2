@@ -16,7 +16,16 @@ describe('IFrame',()=>{
         cy.visit('https://the-internet.herokuapp.com/iframe')
         cy.wait(3000)
         
+        //cy.frameLoaded() : bu kodla iframe in yerini tanımlıyoruz
         cy.frameLoaded('#mce_0_ifr')
+
+        //cy.iframe(): kodu ile iframe e gidiyoruz
+
+        cy.iframe().find('p').clear()
+        cy.iframe().find('p').type('Cypress was here')
+
+        cy.get('.large-4 > div > a').should('contain.text','Elemental Selenium').click()
+
 
 
    })
