@@ -82,7 +82,11 @@ describe('Check Box',()=>{
 
     cy.get('input[type="checkbox"]').click({ multiple: true })
     cy.wait(2000)
-    //burada alınan locate de 15 element olduğu için herbirini tıklamak istiyırsak { multiple: true } şeklinde belirtmeliyiz.
+    //burada alınan locate de 15 element olduğu için herbirini tıklamak istiyorsak { multiple: true } şeklinde belirtmeliyiz.
+
+    //birinci elementin checkbox işaretli olduğunu html kodunda class isminin değişiminden assert edelim.
+    cy.get('input[type="checkbox"]').first().parent().should('have.class','checked')
+
 
 
    })
