@@ -3,14 +3,10 @@
 describe('Custom Commads',()=>{
    
     it.only('Amazon Search',()=>{
-        cy.amazonSearch('kastamonu helvası')
-
-
-   })
-
-   it('',()=>{
-
+        cy.amazonSearch('İPHONE')
 
    })
+
+
 
 })

@@ -44,6 +44,7 @@ Cypress.Commands.add('automation_practice_login',(email, password)=> {
         cy.get('#twotabsearchtextbox').type(productName)
         cy.wait(1000)
         cy.get('#nav-search-submit-button').click()
+        cy.screenshot()
 
  })
 
