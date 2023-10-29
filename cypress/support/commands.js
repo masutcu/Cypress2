@@ -23,3 +23,27 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('automation_practice_login',(email, password)=> { 
+    
+    cy.visit('http://www.automationpractice.pl/index.php');
+        cy.wait(3000)
+        cy.get('.login').click()
+
+        cy.get('#email').type(email)
+        cy.get('#passwd').type(password)
+
+        cy.get('#SubmitLogin > span').click()
+
+ })
+
+ Cypress.Commands.add('amazonSearch',(productName)=> { 
+    
+    cy.visit('http://www.amazon.com/');
+        cy.wait(3000)
+        cy.get('#twotabsearchtextbox').type(productName)
+        cy.wait(1000)
+        cy.get('#nav-search-submit-button').click()
+
+ })
+
