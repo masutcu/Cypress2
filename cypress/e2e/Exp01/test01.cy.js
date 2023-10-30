@@ -7,6 +7,8 @@ describe('first test',()=>{
     it('test01',()=>{
         cy.visit('https://koalaresorthotels.com/')
 
+        
+
 
 
    })
