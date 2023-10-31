@@ -2,6 +2,8 @@
 import HomePage from '../POM/HomePage.cy'
 import LoginPage from '../POM/LoginPage.cy'
 
+//Bu class da POM mantığıyla testimizi yazıyoruz.
+
 describe('KitapYurdu2', () => {
     
     before(function () {
