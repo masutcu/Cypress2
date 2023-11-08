@@ -1,6 +1,8 @@
 /// <references type="cypress" />
 
 describe('Allerts',()=>{
+
+    
    
     it('Allert Test',()=>{
         //Cypress otomatik olarak Alert tamam butonuna onay verir.
@@ -49,7 +51,7 @@ it('Dismiss Allert Test',()=>{
 })
 
    
-it.only('SendText AllertWindow Test',()=>{
+it.only('PromptAlert-SendText Test',()=>{
     
     cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
     cy.wait(3000)
@@ -68,6 +70,19 @@ it.only('SendText AllertWindow Test',()=>{
 
     
     
+
+
+})
+
+it.only('Authentitation Allert Test',()=>{
+    //Cypress otomatik olarak Alert tamam butonuna onay verir.
+    cy.visit('https://the-internet.herokuapp.com/basic_auth', {auth:{username:'admin',password:'admin'}})
+    //veya 2.yol
+   // cy.visit('https://admin:admin@the-internet.herokuapp.com/basic_auth')
+    
+    cy.wait(3000)
+
+    cy.get('p').should('have.contain','Congratulations')
 
 
 })
