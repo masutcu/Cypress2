@@ -48,3 +48,7 @@ Cypress.Commands.add('automation_practice_login',(email, password)=> {
 
  })
 
+ Cypress.Commands.add('getIframe', (iframeLocate) => { 
+   return  cy.get(iframeLocate).its('0.contentDocument.body').should('be.visible').then(cy.wrap)
+  })
+

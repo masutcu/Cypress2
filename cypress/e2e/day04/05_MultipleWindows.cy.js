@@ -7,7 +7,7 @@ describe('Multiple Windows',()=>{
     Bu yüzden yeni açılan penvcereyi eski pencere 
     alanında açmamız gerekiyor.
     */
-   //1.Yol:  invoke() ile yeni pencere açtıran attiribute u yok ediyoruz
+   //1.Yol:  html kodları üzerinde  target="blank" olarak yer alan ve yeni pencere açtıran tag i, invoke() ile yok ediyoruz
     it('Removing Attribute',()=>{
         cy.visit('https://the-internet.herokuapp.com/windows')
         cy.wait(3000)

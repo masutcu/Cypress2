@@ -12,7 +12,7 @@ describe('IFrame',()=>{
     3:Bu işlemlerden sonra cy.frameLoaded() komutu kullanılabilir oldu
     */
    
-    it.only('Iframe Test',()=>{
+    it('Iframe Test',()=>{
         cy.visit('https://the-internet.herokuapp.com/iframe')
         cy.wait(3000)
         
@@ -29,8 +29,16 @@ describe('IFrame',()=>{
 
 
    })
+   //plugin olmadan
 
-   it('',()=>{
+   it.only('secondway',()=>{
+    cy.visit('https://the-internet.herokuapp.com/iframe')
+    cy.wait(3000)
+        
+        //reusable method yaptık -getIframe()
+        let iframe=cy.getIframe('#mce_0_ifr')
+        iframe.clear().type('Wellcome{ctrl+a}')
+        cy.get('[aria-label="Bold"]').click()
 
 
    })
