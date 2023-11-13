@@ -1,6 +1,7 @@
 /// <references type="cypress" />
 //testler describe komutu ile tanımlanır.
 //sayfa düzenleme için shift+alt+f
+//satırı kopyalamak için shift+alt+aşağı
 describe('My first test',()=>{
    
     it('URL test',()=>{
