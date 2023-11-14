@@ -81,8 +81,6 @@ describe('TableHandling', () => {
             if (totalPages > 1) {
                 cy.get('[class="pagination"]>li:nth-child(' + i + ')').click()
 
-
-
             }
             cy.get('[class="table table-bordered table-hover"]>tbody>tr').each(
                 ($row, index, $rows) => {
