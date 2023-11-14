@@ -4,18 +4,20 @@ describe('mouse Actions', ()=> {
     it('mouseOver', () => {
 
         cy.visit('https://demo.opencart.com/')
-
+        
+        //mouse Desktop başlığının üzerine geliyor
         cy.get('.nav > :nth-child(1) > .dropdown-toggle').trigger('mouseover').click()
-
+        //mouse desktop üzerine gelince açılan penceredeki 1. button
         cy.get('[class="dropdown-menu show"]>div>ul>li:nth-child(1)').should('be.visible')
         
     });
 
     it('rightClick', () => {
+
         cy.visit('https://swisnl.github.io/jQuery-contextMenu/demo.html')
-
+        //sağ click yazan buton üzerinde sağ click yapıyoruz
         cy.get('[class="context-menu-one btn btn-neutral"]').trigger('contextmenu')
-
+        //sağ click ile çıkan delete butonu gözüküyormu
         cy.get('[class="context-menu-list context-menu-root"]>li:nth-child(5)').should('be.visible')
     });
 
