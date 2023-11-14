@@ -17,6 +17,8 @@ describe('mouse Actions', ()=> {
         cy.visit('https://swisnl.github.io/jQuery-contextMenu/demo.html')
         //sağ click yazan buton üzerinde sağ click yapıyoruz
         cy.get('[class="context-menu-one btn btn-neutral"]').trigger('contextmenu')
+        //veya
+        //cy.get('[class="context-menu-one btn btn-neutral"]').rightclick()
         //sağ click ile çıkan delete butonu gözüküyormu
         cy.get('[class="context-menu-list context-menu-root"]>li:nth-child(5)').should('be.visible')
     });
@@ -28,6 +30,8 @@ describe('mouse Actions', ()=> {
          cy.frameLoaded('#iframeResult')
 
          cy.iframe("#iframeResult").find('[ondblclick="myFunction()"]').trigger('dblclick')
+         //veya
+         //cy.iframe("#iframeResult").find('[ondblclick="myFunction()"]').dblclick()
 
          cy.iframe('#iframeResult').find('#demo').should("have.text","Hello World ")
 
