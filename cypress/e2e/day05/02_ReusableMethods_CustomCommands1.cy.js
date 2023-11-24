@@ -2,7 +2,10 @@
 
 describe('Custom Command1',()=>{
    
+    //Cypress da reusable method class custom command ile yapılıyor
+   
     it('Positive Login',()=>{
+   
         cy.visit('http://www.automationpractice.pl/index.php');
         cy.wait(3000)
         cy.get('.login').click()
