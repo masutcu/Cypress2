@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-04T10:54:11.176Z",
+    "end": "2023-12-04T10:54:25.966Z",
+    "duration": 14790,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a6ca60ea-f196-4268-829b-a7e899ec17c2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\day05\\01_DragAndDrop.cy.js",
+      "file": "cypress\\e2e\\day05\\01_DragAndDrop.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c85a756f-f8dd-4a93-aab5-fddd5b725757",
+          "title": "Drag And Drop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Drag And Drop 2.yol",
+              "fullTitle": "Drag And Drop Drag And Drop 2.yol",
+              "timedOut": null,
+              "duration": 12037,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\day05\\\\01_DragAndDrop.cy.js\"\n}",
+              "code": "cy.visit('https://the-internet.herokuapp.com/drag_and_drop');\ncy.wait(3000);\nconst dataTransfer = new DataTransfer();\ncy.get('#column-a').trigger('dragstart', {\n  dataTransfer\n});\ncy.get('#column-b').trigger('drop', {\n  dataTransfer\n});",
+              "err": {},
+              "uuid": "dd843c4d-3cb5-4d87-a402-e021fd605087",
+              "parentUUID": "c85a756f-f8dd-4a93-aab5-fddd5b725757",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dd843c4d-3cb5-4d87-a402-e021fd605087"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12037,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

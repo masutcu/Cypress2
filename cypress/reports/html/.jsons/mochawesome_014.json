@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-04T10:56:04.261Z",
+    "end": "2023-12-04T10:56:23.095Z",
+    "duration": 18834,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "026e12d6-048f-4caa-ade1-ce5c0c50db8b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\day04\\02_CheckBox.cy.js",
+      "file": "cypress\\e2e\\day04\\02_CheckBox.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8f7cd5dd-d656-43e7-a188-01d3fde482a0",
+          "title": "Check Box",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Çoklu CheckBox Click ile",
+              "fullTitle": "Check Box Çoklu CheckBox Click ile",
+              "timedOut": null,
+              "duration": 16532,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\day04\\\\02_CheckBox.cy.js\"\n}",
+              "code": "cy.visit('http://www.automationpractice.pl/index.php');\ncy.wait(2000);\ncy.get('.sf-menu > :nth-child(1) > [href=\"http://www.automationpractice.pl/index.php?id_category=3&controller=category\"]').click();\ncy.wait(2000);\ncy.get('input[type=\"checkbox\"]').click({\n  multiple: true\n});\ncy.wait(2000);\n//burada alınan locate de 15 element olduğu için herbirini tıklamak istiyorsak { multiple: true } şeklinde belirtmeliyiz.\n//birinci elementin checkbox işaretli olduğunu html kodunda class isminin değişiminden assert edelim.\ncy.get('input[type=\"checkbox\"]').first().parent().should('have.class', 'checked');",
+              "err": {},
+              "uuid": "519c2a28-e3ed-424c-865d-b08ae9ce84c5",
+              "parentUUID": "8f7cd5dd-d656-43e7-a188-01d3fde482a0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "519c2a28-e3ed-424c-865d-b08ae9ce84c5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16532,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

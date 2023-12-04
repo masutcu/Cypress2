@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-04T10:53:47.280Z",
+    "end": "2023-12-04T10:53:54.900Z",
+    "duration": 7620,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bc325ebf-3761-45a0-a919-d46fb3d17fc1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\day01\\first_test.cy.js",
+      "file": "cypress\\e2e\\day01\\first_test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "668ba2f3-8909-4cae-a6d2-040105702750",
+          "title": "My first test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL test",
+              "fullTitle": "My first test URL test",
+              "timedOut": null,
+              "duration": 2797,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\day01\\\\first_test.cy.js\"\n}",
+              "code": "cy.visit('https://www.google.com/');\n//visit istenilen url e gitmek için kullanılır.\ncy.url().should('include', 'google');\n//should assert işlemi için kullanılır.",
+              "err": {},
+              "uuid": "d7e0c4e5-d468-402a-b98f-876f9e273a46",
+              "parentUUID": "668ba2f3-8909-4cae-a6d2-040105702750",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Title test",
+              "fullTitle": "My first test Title test",
+              "timedOut": null,
+              "duration": 2106,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\day01\\\\first_test.cy.js\"\n}",
+              "code": "cy.visit('https://www.google.com');\ncy.title().should('include', 'Google');\n//title sayfanın başlığını alır.\ncy.title().should('eq', 'Google');",
+              "err": {},
+              "uuid": "5c2c9ee4-aba5-4a45-8672-f7c128d0fed8",
+              "parentUUID": "668ba2f3-8909-4cae-a6d2-040105702750",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d7e0c4e5-d468-402a-b98f-876f9e273a46",
+            "5c2c9ee4-aba5-4a45-8672-f7c128d0fed8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4903,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

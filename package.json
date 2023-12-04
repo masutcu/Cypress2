@@ -7,13 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run_day01": "npx cypress run --spec 'cypress/e2e/day01/' --browser chrome",
     "mysmoketest": "npx cypress run --spec 'cypress/e2e/day02/' --browser edge --headed",
-    
     "test-dashboard": "npx cypress run --record --key b86c881c-4442-4bdc-8772-3c3ee4ec7a87",
-    "_comment1":"üstteki kod terminalde 'npm run test-dashboard' dediğimizde bütün testler çalışarak dashboard a gönderilecek",
-    
+    "_comment1": "üstteki kod terminalde 'npm run test-dashboard' dediğimizde bütün testler çalışarak dashboard a gönderilecek",
     "dashboard_day02": "npx cypress run --spec 'cypress/e2e/day02/' --record --key b86c881c-4442-4bdc-8772-3c3ee4ec7a87",
-    "_comment2":"üstteki kod terminalde 'npm run dashboard_day02' dediğimizde day02 testler çalışarak dashboard a gönderilecek"
-    
+    "_comment2": "üstteki kod terminalde 'npm run dashboard_day02' dediğimizde day02 testler çalışarak dashboard a gönderilecek"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +20,7 @@
     "cypress": "^13.3.3",
     "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.7.0",
     "cypress-xpath": "^2.0.1"
   }
 }
-

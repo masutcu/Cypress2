@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-04T10:53:17.242Z",
+    "end": "2023-12-04T10:53:25.054Z",
+    "duration": 7812,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b8c7275a-fcc4-4cf8-9b5c-575f7909c597",
+      "title": "",
+      "fullFile": "cypress\\e2e\\day02\\03_LoginTest.cy.js",
+      "file": "cypress\\e2e\\day02\\03_LoginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a8c4a1ac-82e7-46b3-8b0c-5126ae32be01",
+          "title": "Login Menu Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Case 1",
+              "fullTitle": "Login Menu Test Test Case 1",
+              "timedOut": null,
+              "duration": 3627,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\day02\\\\03_LoginTest.cy.js\"\n}",
+              "code": "cy.visit('http://www.automationpractice.pl/index.php');\ncy.get('.login').click();\ncy.contains(\"h3[class='page-subheading']\", 'Create an account');\ncy.contains('#create-account_form > .form_content > .form-group > label', 'Email addres');",
+              "err": {},
+              "uuid": "745be014-9aef-4932-a474-8b0d25d12b18",
+              "parentUUID": "a8c4a1ac-82e7-46b3-8b0c-5126ae32be01",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Case 2",
+              "fullTitle": "Login Menu Test Test Case 2",
+              "timedOut": null,
+              "duration": 1448,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\day02\\\\03_LoginTest.cy.js\"\n}",
+              "code": "cy.visit('http://www.automationpractice.pl/index.php');\ncy.get('.login').click();\n//1.yol\ncy.get(':nth-child(1) > label').should('contain', 'Email addres');\n//2. yol JQuary ile\ncy.get(':nth-child(1) > label').then(emailtext => {\n  expect(emailtext.text()).to.equal('Email address');\n});\n//3. yol\ncy.get(':nth-child(1) > label').invoke('text').then(emailtext2 => {\n  expect(emailtext2).to.equal('Email address');\n});",
+              "err": {},
+              "uuid": "f3d01835-a9c0-4533-856d-621881a7e445",
+              "parentUUID": "a8c4a1ac-82e7-46b3-8b0c-5126ae32be01",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "745be014-9aef-4932-a474-8b0d25d12b18",
+            "f3d01835-a9c0-4533-856d-621881a7e445"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5075,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

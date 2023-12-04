@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-04T10:52:58.948Z",
+    "end": "2023-12-04T10:53:14.373Z",
+    "duration": 15425,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e2ee9055-0849-457e-a652-db3dc407276e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\day02\\02_LoginTest.cy.js",
+      "file": "cypress\\e2e\\day02\\02_LoginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7cafe1ca-3b5f-4b89-917f-3ff9c9b73a67",
+          "title": "Koala ResortHotel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Log in Test",
+              "fullTitle": "Koala ResortHotel Log in Test",
+              "timedOut": null,
+              "duration": 13201,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\day02\\\\02_LoginTest.cy.js\"\n}",
+              "code": "cy.visit('https://qa-environment.koalaresorthotels.com/');\n//contains kullanımları 1: içrerik text ile\n// cy.contains('Log in').click()\n//2:veya aşağıdaki gibi element adresinde text aratarakda yapılabilir\n//cy.contains('[class=\"nav-link\"]','Log in').click()\n//3:veya tag name i vererek yapılabilir\ncy.contains('li', 'Log in').click();\n//4: veya büyük küçük harf dikkate almadan \ncy.contains('log in', {\n  matchCase: false\n}).click();\n//ASSERT\n//1 have.text ile -locate edilen yerdeki metinde istenilen text varmı?\ncy.get('#navLogon > .nav-link').should('have.text', 'Log in');\n//2 cy.url()\ncy.url().should('include', 'Account/Logon');\n//3 be.visible\ncy.get('.row > .mb-4').should('be.visible');\n//4 title ile \ncy.title().should('eq', 'KoalaResortHotels - Log in');\n//5 include.text\ncy.get('#navLogon > .nav-link').should('include.text', 'Log in');\n//Toplam link sayısı\ncy.get('li a').should('have.length', 29);\n//find(): belirli bir html seçiminin alt elemanlarını bulmak için \ncy.get('li').find('a[href=\"/Rooms/320\"]').should('have.text', 'Twin 2');\n//within() : \ncy.get('div.categories').within(() => {\n  cy.get('a[href=\"/Rooms/320\"]').click();\n  /*\n  Web elementleri ilk olarak get() ile bulacağız, Bulamaz isek find() ile, olmaz ise within() ile deneyeceğiz\n  */\n});",
+              "err": {},
+              "uuid": "1ea4c2af-bfe6-4ab6-92ff-bdcc82b87bd8",
+              "parentUUID": "7cafe1ca-3b5f-4b89-917f-3ff9c9b73a67",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1ea4c2af-bfe6-4ab6-92ff-bdcc82b87bd8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13201,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

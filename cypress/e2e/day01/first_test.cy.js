@@ -2,6 +2,7 @@
 //testler describe komutu ile tanımlanır.
 //sayfa düzenleme için shift+alt+f
 //satırı kopyalamak için shift+alt+aşağı
+//sonra terminalden: npx cypress run –-spec 'file yolu' ile istediğin testin yolu. yola tırnak koyma
 describe('My first test',()=>{
    
     it('URL test',()=>{

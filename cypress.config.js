@@ -1,20 +1,18 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
     setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
       // implement node event listeners here
     },
-    baseUrl: "https://www.google.com",
-    projectId: "3v688k",
-
-    "video": false,
-    //testlerin videolarını kaydetmez
-    
-    //"retries":2
-    //fail olduğunda kaç kere DAHA çalıştırılması gerektiği belirtilir.2 yazdığımızda 3 kez çalışır.
-
 
 
   },
+  videosFolder: 'cypress/Mali_Videos', // Videoların kaydedileceği klasör
+  video: false, // Video kaydını etkinleştir
+  screenshotsFolder: true, // Screenshot özelliğini devre dışı bırak
+
+
 });
